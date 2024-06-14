@@ -1,6 +1,6 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
     <input formControlName="title" type="text" class="border w-full px-3 py-1" placeholder="Product name">
 
-    <p *ngIf="title.errors['minlength']" class="text-red-700 font-medium mb-2 mt-2">Min 4 symbols</p>
+    <p *ngIf="title.errors?.minlength" class="text-red-700 font-medium mb-2 mt-2">Min 4 symbols</p>
     <button type="submit" class="border rounded px-3 py-2 mt-4 text-white bg-blue-950 w-full">Click</button>
 </form>
